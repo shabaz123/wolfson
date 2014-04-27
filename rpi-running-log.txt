@@ -1,0 +1,278 @@
+Linux raspberrypi 3.10.25+ #1 PREEMPT Sun Apr 27 11:49:51 UTC 2014 armv6l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sun Apr 27 12:28:44 2014 from shabaz-ws1.home
+pi@raspberrypi:~$ 
+pi@raspberrypi:~$ sudo dmesg
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Initializing cgroup subsys cpu
+[    0.000000] Initializing cgroup subsys cpuacct
+[    0.000000] Linux version 3.10.25+ (pi@raspberrypi) (gcc version 4.6.3 (Debian 4.6.3-14+rpi1) ) #1 PREEMPT Sun Apr 27 11:49:51 UTC 2014
+[    0.000000] CPU: ARMv6-compatible processor [410fb767] revision 7 (ARMv7), cr=00c5387d
+[    0.000000] CPU: PIPT / VIPT nonaliasing data cache, VIPT nonaliasing instruction cache
+[    0.000000] Machine: BCM2708
+[    0.000000] cma: CMA: reserved 16 MiB at 1b000000
+[    0.000000] Memory policy: ECC disabled, Data cache writeback
+[    0.000000] On node 0 totalpages: 114688
+[    0.000000] free_area_init_node: node 0, pgdat c06772bc, node_mem_map c0724000
+[    0.000000]   Normal zone: 896 pages used for memmap
+[    0.000000]   Normal zone: 0 pages reserved
+[    0.000000]   Normal zone: 114688 pages, LIFO batch:31
+[    0.000000] pcpu-alloc: s0 r0 d32768 u32768 alloc=1*32768
+[    0.000000] pcpu-alloc: [0] 0 
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 113792
+[    0.000000] Kernel command line: dma.dmachans=0x7f35 bcm2708_fb.fbwidth=1136 bcm2708_fb.fbheight=592 bcm2708.boardrev=0xf bcm2708.serial=0x57f58f48 smsc95xx.macaddr=B8:27:EB:F5:8F:48 sdhci-bcm2708.emmc_clock_freq=250000000 vc_mem.mem_base=0x1ec00000 vc_mem.mem_size=0x20000000  dwc_otg.lpm_enable=0 console=ttyAMA0,115200 kgdboc=ttyAMA0,115200 console=tty1 root=/dev/mmcblk0p6 rootfstype=ext4 elevator=deadline rootwait
+[    0.000000] PID hash table entries: 2048 (order: 1, 8192 bytes)
+[    0.000000] Dentry cache hash table entries: 65536 (order: 6, 262144 bytes)
+[    0.000000] Inode-cache hash table entries: 32768 (order: 5, 131072 bytes)
+[    0.000000] Memory: 448MB = 448MB total
+[    0.000000] Memory: 430984k/430984k available, 27768k reserved, 0K highmem
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[    0.000000]     fixmap  : 0xfff00000 - 0xfffe0000   ( 896 kB)
+[    0.000000]     vmalloc : 0xdc800000 - 0xff000000   ( 552 MB)
+[    0.000000]     lowmem  : 0xc0000000 - 0xdc000000   ( 448 MB)
+[    0.000000]     modules : 0xbf000000 - 0xc0000000   (  16 MB)
+[    0.000000]       .text : 0xc0008000 - 0xc060f660   (6174 kB)
+[    0.000000]       .init : 0xc0610000 - 0xc06352ac   ( 149 kB)
+[    0.000000]       .data : 0xc0636000 - 0xc0677ba0   ( 263 kB)
+[    0.000000]        .bss : 0xc0677ba0 - 0xc0723e50   ( 689 kB)
+[    0.000000] SLUB: HWalign=32, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+[    0.000000] Preemptible hierarchical RCU implementation.
+[    0.000000] NR_IRQS:460
+[    0.000000] sched_clock: 32 bits at 1000kHz, resolution 1000ns, wraps every 4294967ms
+[    0.000000] Switching to timer-based delay loop
+[    0.000000] Console: colour dummy device 80x30
+[    0.000000] console [tty1] enabled
+[    0.001162] Calibrating delay loop (skipped), value calculated using timer frequency.. 2.00 BogoMIPS (lpj=10000)
+[    0.001226] pid_max: default: 32768 minimum: 301
+[    0.001759] Mount-cache hash table entries: 512
+[    0.002571] Initializing cgroup subsys memory
+[    0.002683] Initializing cgroup subsys devices
+[    0.002722] Initializing cgroup subsys freezer
+[    0.002755] Initializing cgroup subsys blkio
+[    0.002924] CPU: Testing write buffer coherency: ok
+[    0.003389] Setting up static identity map for 0xc044b488 - 0xc044b4e4
+[    0.005232] devtmpfs: initialized
+[    0.017798] regulator-dummy: no parameters
+[    0.020063] NET: Registered protocol family 16
+[    0.026034] DMA: preallocated 4096 KiB pool for atomic coherent allocations
+[    0.027067] bcm2708.uart_clock = 0
+[    0.028885] hw-breakpoint: found 6 breakpoint and 1 watchpoint registers.
+[    0.028941] hw-breakpoint: maximum watchpoint size is 4 bytes.
+[    0.028978] mailbox: Broadcom VideoCore Mailbox driver
+[    0.029076] bcm2708_vcio: mailbox at f200b880
+[    0.029182] bcm_power: Broadcom power driver
+[    0.029221] bcm_power_open() -> 0
+[    0.029247] bcm_power_request(0, 8)
+[    0.529977] bcm_mailbox_read -> 00000080, 0
+[    0.530019] bcm_power_request -> 0
+[    0.530303] Serial: AMBA PL011 UART driver
+[    0.530450] dev:f1: ttyAMA0 at MMIO 0x20201000 (irq = 83) is a PL011 rev3
+[    0.871779] console [ttyAMA0] enabled
+[    0.896823] bio: create slab <bio-0> at 0
+[    0.901969] platform bcm2708-dmaengine: Driver bcm2708-dmaengine requests probe deferral
+[    0.910278] DC_3V3: 1800 mV 
+[    0.913477] DC_5V: 5000 mV 
+[    0.916847] SCSI subsystem initialized
+[    0.920818] usbcore: registered new interface driver usbfs
+[    0.926462] usbcore: registered new interface driver hub
+[    0.932063] usbcore: registered new device driver usb
+[    0.937624] Advanced Linux Sound Architecture Driver Initialized.
+[    0.944826] Switching to clocksource stc
+[    0.949207] FS-Cache: Loaded
+[    0.952376] CacheFiles: Loaded
+[    0.967941] NET: Registered protocol family 2
+[    0.973339] TCP established hash table entries: 4096 (order: 3, 32768 bytes)
+[    0.980611] TCP bind hash table entries: 4096 (order: 2, 16384 bytes)
+[    0.987135] TCP: Hash tables configured (established 4096 bind 4096)
+[    0.993609] TCP: reno registered
+[    0.996868] UDP hash table entries: 256 (order: 0, 4096 bytes)
+[    1.002780] UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+[    1.009550] NET: Registered protocol family 1
+[    1.014502] RPC: Registered named UNIX socket transport module.
+[    1.020567] RPC: Registered udp transport module.
+[    1.025292] RPC: Registered tcp transport module.
+[    1.030045] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    1.037386] bcm2708_dma: DMA manager at f2007000
+[    1.042205] bcm2708_gpio: bcm2708_gpio_probe c0643df0
+[    1.047663] vc-mem: phys_addr:0x00000000 mem_base=0x1ec00000 mem_size:0x20000000(512 MiB)
+[    1.057062] audit: initializing netlink socket (disabled)
+[    1.062719] type=2000 audit(0.920:1): initialized
+[    1.242959] VFS: Disk quotas dquot_6.5.2
+[    1.247242] Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+[    1.256224] FS-Cache: Netfs 'nfs' registered for caching
+[    1.263001] NFS: Registering the id_resolver key type
+[    1.268171] Key type id_resolver registered
+[    1.272496] Key type id_legacy registered
+[    1.277246] msgmni has been set to 873
+[    1.283225] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 252)
+[    1.291085] io scheduler noop registered
+[    1.295045] io scheduler deadline registered (default)
+[    1.300650] io scheduler cfq registered
+[    1.306013] BCM2708FB: allocated DMA memory 5b400000
+[    1.311156] BCM2708FB: allocated DMA channel 0 @ f2007000
+[    1.334876] Console: switching to colour frame buffer device 142x37
+[    1.346402] uart-pl011 dev:f1: no DMA platform data
+[    1.351533] kgdb: Registered I/O driver kgdboc.
+[    1.358821] vc-cma: Videocore CMA driver
+[    1.364852] vc-cma: vc_cma_base      = 0x00000000
+[    1.371600] vc-cma: vc_cma_size      = 0x00000000 (0 MiB)
+[    1.379020] vc-cma: vc_cma_initial   = 0x00000000 (0 MiB)
+[    1.395548] brd: module loaded
+[    1.405798] loop: module loaded
+[    1.411259] vchiq: vchiq_init_state: slot_zero = 0xdb000000, is_master = 0
+[    1.421267] Loading iSCSI transport class v2.0-870.
+[    1.430020] bcm2708_spi bcm2708_spi.0: master is unqueued, this is deprecated
+[    1.468444] LDO1: 1200 <--> 1800 mV at 1800 mV 
+[    1.475192] LDO1: supplied by DC_3V3
+[    1.499667] arizona spi0.1: Unknown device ID 0
+[    1.506394] ------------[ cut here ]------------
+[    1.513114] WARNING: at drivers/regulator/core.c:3733 regulator_unregister+0x98/0xb0()
+[    1.523068] Modules linked in:
+[    1.528103] CPU: 0 PID: 1 Comm: swapper Not tainted 3.10.25+ #1
+[    1.536077] [<c0013a04>] (unwind_backtrace+0x0/0xf0) from [<c0010da0>] (show_stack+0x10/0x14)
+[    1.546746] [<c0010da0>] (show_stack+0x10/0x14) from [<c001e5c0>] (warn_slowpath_common+0x4c/0x68)
+[    1.557778] [<c001e5c0>] (warn_slowpath_common+0x4c/0x68) from [<c001e5f8>] (warn_slowpath_null+0x1c/0x24)
+[    1.569603] [<c001e5f8>] (warn_slowpath_null+0x1c/0x24) from [<c0257a24>] (regulator_unregister+0x98/0xb0)
+[    1.581464] [<c0257a24>] (regulator_unregister+0x98/0xb0) from [<c025bd1c>] (arizona_ldo1_remove+0x14/0x1c)
+[    1.593442] [<c025bd1c>] (arizona_ldo1_remove+0x14/0x1c) from [<c0286bb8>] (platform_drv_remove+0x18/0x1c)
+[    1.605338] [<c0286bb8>] (platform_drv_remove+0x18/0x1c) from [<c0285480>] (__device_release_driver+0x58/0xb4)
+[    1.617589] [<c0285480>] (__device_release_driver+0x58/0xb4) from [<c02854f8>] (device_release_driver+0x1c/0x28)
+[    1.630062] [<c02854f8>] (device_release_driver+0x1c/0x28) from [<c0285000>] (bus_remove_device+0xc4/0xe4)
+[    1.642005] [<c0285000>] (bus_remove_device+0xc4/0xe4) from [<c028281c>] (device_del+0xf4/0x178)
+[    1.653175] [<c028281c>] (device_del+0xf4/0x178) from [<c0286f28>] (platform_device_del+0x14/0xa8)
+[    1.664562] [<c0286f28>] (platform_device_del+0x14/0xa8) from [<c02872c8>] (platform_device_unregister+0xc/0x18)
+[    1.677214] [<c02872c8>] (platform_device_unregister+0xc/0x18) from [<c02a9d98>] (mfd_remove_devices_fn+0x48/0x54)
+[    1.690038] [<c02a9d98>] (mfd_remove_devices_fn+0x48/0x54) from [<c028229c>] (device_for_each_child+0x48/0x74)
+[    1.702581] [<c028229c>] (device_for_each_child+0x48/0x74) from [<c02a9bf0>] (mfd_remove_devices+0x1c/0x30)
+[    1.714964] [<c02a9bf0>] (mfd_remove_devices+0x1c/0x30) from [<c02a6f5c>] (arizona_dev_init+0xf4/0x9dc)
+[    1.726982] [<c02a6f5c>] (arizona_dev_init+0xf4/0x9dc) from [<c02c0c98>] (spi_drv_probe+0x18/0x1c)
+[    1.738563] [<c02c0c98>] (spi_drv_probe+0x18/0x1c) from [<c0285944>] (driver_probe_device+0x70/0x1f0)
+[    1.750508] [<c0285944>] (driver_probe_device+0x70/0x1f0) from [<c0284160>] (bus_for_each_drv+0x5c/0x88)
+[    1.762782] [<c0284160>] (bus_for_each_drv+0x5c/0x88) from [<c02858a0>] (device_attach+0x80/0x98)
+[    1.774398] [<c02858a0>] (device_attach+0x80/0x98) from [<c0284f18>] (bus_probe_device+0x84/0xa8)
+[    1.786129] [<c0284f18>] (bus_probe_device+0x84/0xa8) from [<c02836e4>] (device_add+0x4dc/0x5b0)
+[    1.797781] [<c02836e4>] (device_add+0x4dc/0x5b0) from [<c02c1b14>] (spi_add_device+0xb4/0x134)
+[    1.809328] [<c02c1b14>] (spi_add_device+0xb4/0x134) from [<c02c1c08>] (spi_new_device+0x74/0xb0)
+[    1.821066] [<c02c1c08>] (spi_new_device+0x74/0xb0) from [<c02c1eb0>] (spi_match_master_to_boardinfo+0x20/0x40)
+[    1.834066] [<c02c1eb0>] (spi_match_master_to_boardinfo+0x20/0x40) from [<c02c1f9c>] (spi_register_master+0xcc/0x27c)
+[    1.847651] [<c02c1f9c>] (spi_register_master+0xcc/0x27c) from [<c02c30d0>] (bcm2708_spi_probe+0x22c/0x334)
+[    1.860357] [<c02c30d0>] (bcm2708_spi_probe+0x22c/0x334) from [<c0286b94>] (platform_drv_probe+0x18/0x1c)
+[    1.872914] [<c0286b94>] (platform_drv_probe+0x18/0x1c) from [<c0285944>] (driver_probe_device+0x70/0x1f0)
+[    1.885610] [<c0285944>] (driver_probe_device+0x70/0x1f0) from [<c0285b50>] (__driver_attach+0x8c/0x90)
+[    1.898051] [<c0285b50>] (__driver_attach+0x8c/0x90) from [<c02841e0>] (bus_for_each_dev+0x54/0x88)
+[    1.910211] [<c02841e0>] (bus_for_each_dev+0x54/0x88) from [<c02850f8>] (bus_add_driver+0xd8/0x22c)
+[    1.922289] [<c02850f8>] (bus_add_driver+0xd8/0x22c) from [<c028603c>] (driver_register+0x78/0x144)
+[    1.934394] [<c028603c>] (driver_register+0x78/0x144) from [<c0286e54>] (platform_driver_probe+0x1c/0xb0)
+[    1.947029] [<c0286e54>] (platform_driver_probe+0x1c/0xb0) from [<c00084c4>] (do_one_initcall+0x34/0x160)
+[    1.959635] [<c00084c4>] (do_one_initcall+0x34/0x160) from [<c0610b4c>] (kernel_init_freeable+0xe8/0x1b4)
+[    1.972229] [<c0610b4c>] (kernel_init_freeable+0xe8/0x1b4) from [<c04404b8>] (kernel_init+0x8/0xe4)
+[    1.984335] [<c04404b8>] (kernel_init+0x8/0xe4) from [<c000daf8>] (ret_from_fork+0x14/0x3c)
+[    1.995762] ---[ end trace ae2e450c8844b3df ]---
+[    2.003911] bcm2708_spi bcm2708_spi.0: SPI Controller at 0x20204000 (irq 80)
+[    2.014227] usbcore: registered new interface driver smsc95xx
+[    2.022983] dwc_otg: version 3.00a 10-AUG-2012 (platform bus)
+[    2.231823] Core Release: 2.80a
+[    2.237852] Setting default values for core params
+[    2.245575] Finished setting default values for core params
+[    2.453973] Using Buffer DMA mode
+[    2.460113] Periodic Transfer Interrupt Enhancement - disabled
+[    2.468630] Multiprocessor Interrupt Enhancement - disabled
+[    2.476923] OTG VER PARAM: 0, OTG VER FLAG: 0
+[    2.483931] Dedicated Tx FIFOs mode
+[    2.490683] dwc_otg: Microframe scheduler enabled
+[    2.490947] dwc_otg bcm2708_usb: DWC OTG Controller
+[    2.498527] dwc_otg bcm2708_usb: new USB bus registered, assigned bus number 1
+[    2.508450] dwc_otg bcm2708_usb: irq 32, io mem 0x00000000
+[    2.516639] Init: Port Power? op_state=1
+[    2.523127] Init: Power Port (0)
+[    2.528956] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+[    2.538182] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    2.547883] usb usb1: Product: DWC OTG Controller
+[    2.554991] usb usb1: Manufacturer: Linux 3.10.25+ dwc_otg_hcd
+[    2.563235] usb usb1: SerialNumber: bcm2708_usb
+[    2.570878] hub 1-0:1.0: USB hub found
+[    2.576990] hub 1-0:1.0: 1 port detected
+[    2.583556] dwc_otg: FIQ enabled
+[    2.583575] dwc_otg: NAK holdoff enabled
+[    2.583584] dwc_otg: FIQ split fix enabled
+[    2.583602] Module dwc_common_port init
+[    2.584065] usbcore: registered new interface driver usb-storage
+[    2.592843] mousedev: PS/2 mouse device common for all mice
+[    2.600767] i2c /dev entries driver
+[    2.606571] bcm2708_i2c_init_pinmode(0,0)
+[    2.612799] bcm2708_i2c_init_pinmode(0,1)
+[    2.619326] bcm2708_i2c bcm2708_i2c.0: BSC0 Controller at 0x20205000 (irq 79) (baudrate 100000)
+[    2.630259] bcm2708_i2c_init_pinmode(1,2)
+[    2.636283] bcm2708_i2c_init_pinmode(1,3)
+[    2.642815] bcm2708_i2c bcm2708_i2c.1: BSC1 Controller at 0x20804000 (irq 79) (baudrate 100000)
+[    2.654415] bcm2835-cpufreq: min=700000 max=700000 cur=700000
+[    2.662372] bcm2835-cpufreq: switching to governor powersave
+[    2.670024] bcm2835-cpufreq: switching to governor powersave
+[    2.677629] cpuidle: using governor ladder
+[    2.683752] cpuidle: using governor menu
+[    2.689702] sdhci: Secure Digital Host Controller Interface driver
+[    2.697793] sdhci: Copyright(c) Pierre Ossman
+[    2.704145] sdhci: Enable low-latency mode
+[    2.710595] mmc0: no vqmmc regulator found
+[    2.716571] mmc0: no vmmc regulator found
+[    2.758929] mmc0: SDHCI controller on BCM2708_Arasan [platform] using platform's DMA
+[    2.768757] mmc0: BCM2708 SDHC host at 0x20300000 DMA 2 IRQ 77
+[    2.778727] sdhci-pltfm: SDHCI platform and OF driver helper
+[    2.788499] Indeed it is in host mode hprt0 = 00021501
+[    2.797795] ledtrig-cpu: registered to indicate activity on CPUs
+[    2.819118] hidraw: raw HID events driver (C) Jiri Kosina
+[    2.829229] usbcore: registered new interface driver usbhid
+[    2.861976] usbhid: USB HID core driver
+[    2.869535] bcm2708-i2s bcm2708-i2s.0: Failed to create debugfs directory
+[    2.913940] mmc0: new high speed SDHC card at address aaaa
+[    2.945555] mmcblk0: mmc0:aaaa SU16G 14.8 GiB 
+[    2.962915]  mmcblk0: p1 p2 < p5 p6 > p3
+[    3.058927] usb 1-1: new high-speed USB device number 2 using dwc_otg
+[    3.067645] Indeed it is in host mode hprt0 = 00001101
+[    3.349445] usb 1-1: New USB device found, idVendor=0424, idProduct=9512
+[    3.358292] usb 1-1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[    3.389922] hub 1-1:1.0: USB hub found
+[    3.408909] hub 1-1:1.0: 3 ports detected
+[    3.689068] usb 1-1.1: new high-speed USB device number 3 using dwc_otg
+[    3.809496] usb 1-1.1: New USB device found, idVendor=0424, idProduct=ec00
+[    3.818520] usb 1-1.1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[    3.851868] smsc95xx v1.0.4
+[    3.933816] smsc95xx 1-1.1:1.0 eth0: register 'smsc95xx' at usb-bcm2708_usb-1.1, smsc95xx USB 2.0 Ethernet, b8:27:eb:f5:8f:48
+[    4.085479] snd-rpi-wsp snd-rpi-wsp.0: ASoC: CODEC wm5102-codec not registered
+[    4.095112] snd-rpi-wsp snd-rpi-wsp.0: Failed to register card: -517
+[    4.103751] platform snd-rpi-wsp.0: Driver snd-rpi-wsp requests probe deferral
+[    4.114014] TCP: cubic registered
+[    4.119729] Initializing XFRM netlink socket
+[    4.126337] NET: Registered protocol family 17
+[    4.133342] Key type dns_resolver registered
+[    4.140382] VFP support v0.3: implementor 41 architecture 1 part 20 variant b rev 5
+[    4.151198] registered taskstats version 1
+[    5.159020] snd-rpi-wsp snd-rpi-wsp.0: ASoC: CODEC wm5102-codec not registered
+[    5.168748] snd-rpi-wsp snd-rpi-wsp.0: Failed to register card: -517
+[    5.177540] platform snd-rpi-wsp.0: Driver snd-rpi-wsp requests probe deferral
+[    5.187243] drivers/rtc/hctosys.c: unable to open rtc device (rtc0)
+[    5.209693] ALSA device list:
+[    5.215075]   #0: bcm2835 ALSA
+[    6.207984] snd-rpi-wsp snd-rpi-wsp.0: ASoC: CODEC wm5102-codec not registered
+[    6.217778] snd-rpi-wsp snd-rpi-wsp.0: Failed to register card: -517
+[    6.226590] platform snd-rpi-wsp.0: Driver snd-rpi-wsp requests probe deferral
+[    6.267285] EXT4-fs (mmcblk0p6): mounted filesystem with ordered data mode. Opts: (null)
+[    6.278109] VFS: Mounted root (ext4 filesystem) on device 179:6.
+[    6.297334] devtmpfs: mounted
+[    6.303319] Freeing unused kernel memory: 148K (c0610000 - c0635000)
+[    7.740156] udevd[157]: starting version 175
+[   10.912204] snd-rpi-wsp snd-rpi-wsp.0: ASoC: CODEC wm5102-codec not registered
+[   10.933112] snd-rpi-wsp snd-rpi-wsp.0: Failed to register card: -517
+[   10.949178] platform snd-rpi-wsp.0: Driver snd-rpi-wsp requests probe deferral
+[   14.387105] EXT4-fs (mmcblk0p6): re-mounted. Opts: (null)
+[   14.845558] EXT4-fs (mmcblk0p6): re-mounted. Opts: (null)
+[   22.484170] smsc95xx 1-1.1:1.0 eth0: hardware isn't capable of remote wakeup
+[   23.993578] smsc95xx 1-1.1:1.0 eth0: link up, 100Mbps, full-duplex, lpa 0x41E1
+[   27.455342] Adding 102396k swap on /var/swap.  Priority:-1 extents:1 across:102396k SSFS
